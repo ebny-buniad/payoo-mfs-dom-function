@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Mobile Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            font-family: "Poppins", serif;
+            font-size: 13px;
+        }
+
+        .phone {
+            width: 350px;
+            height: 700px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 3px solid black;
+        }
+
+        .notch {
+            width: 15px;
+            height: 15px;
+            background-color: rgb(29, 29, 29);
+            border: 2px solid rgb(184, 184, 184);
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="phone">
+        <div class="notch"></div>
+        <div class="components">
+            <!-- Balance and logout section start -->
+            <div class="flex justify-between items-center bg-pink-600 text-white rounded-xl pt-7 pb-2 px-2">
+                <div class="flex items-center gap-2">
+                    <img class="border-2 rounded-full w-12" src="img/user.jpg" alt="">
+                    <div>
+                        <p>Ebny Buniad</p>
+                        <h1 class="text-xl font-semibold">$<span>5000</span></h1>
+                        <p>Available Balance</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="bg-white text-black px-3 py-2 rounded">Log out <i
+                            class="ps-1 fa-solid fa-arrow-up-right-from-square"></i></button>
+                </div>
+            </div>
+            <!-- Balance and logout section end -->
+
+            <!-- App Features Start -->
+            <div class="px-2 grid grid-cols-3 gap-3 mt-5">
+                <button class="">
+                    <img class="w-16 mx-auto" src="img/add-money.webp" alt="">
+                    <p class="text-xs">Add Money</p>
+                </button>
+                <button class="">
+                    <img class="w-16 mx-auto" src="img/cashout.webp" alt="">
+                    <p class="text-xs">Cashout</p>
+                </button>
+                <button class="">
+                    <img class="w-16 mx-auto" src="img/payment.webp" alt="">
+                    <p class="text-xs">Payment</p>
+                </button>
+                <button class="">
+                    <img class="w-16 mx-auto" src="img/recharge.webp" alt="">
+                    <p class="text-xs">Recharge</p>
+                </button>
+                <button class="">
+                    <img class="w-16 mx-auto" src="img/pay-bill.webp" alt="">
+                    <p class="text-xs">Pay Bill</p>
+                </button>
+                <button class="">
+                    <img class="w-16 mx-auto" src="img/savings-icon-web_1727696283394.webp" alt="">
+                    <p class="text-xs">Savings</p>
+                </button>
+            </div>
+            <!-- App Features End -->
+
+            <div class="">
+                <form class="card-body p-5">
+                    <div class="form-control">
+                        <label class="label py-1">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <input type="email" placeholder="email" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label py-1">
+                            <span class="label-text">Password</span>
+                        </label>
+                        <input type="password" placeholder="PIN" class="input input-bordered" autocomplete="off"
+                            required />
+
+                    </div>
+                    <div class="form-control">
+                        <button class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="js/addMoney.js"></script>
+</body>
+
+</html>
